@@ -28,7 +28,8 @@ jobs:
         with:
           root_file: resume.tex
           latexmk_use_lualatex: true 
+      - run: mv resume.pdf huuphatho_cv.pdf
       - uses: actions/upload-artifact@v2
         with:
           name: huuphatho_cv
-          path: resume.pdf  
+          path: huuphatho_cv.pdf  
