@@ -28,7 +28,7 @@ jobs:
         with:
           root_file: resume-v2-2025.tex
           latexmk_use_lualatex: true 
-      - run: mv resume.pdf huuphatho_cv.pdf
+      - run: mv resume-v2-2025.pdf huuphatho_cv.pdf
       - uses: actions/upload-artifact@v4
         with:
           name: huuphatho_cv
