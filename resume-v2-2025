@@ -1,0 +1,412 @@
+% Resume v2 for Ho Phat
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Ho Phat's CV},
+    pdfauthor={Ho Phat},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+% Some settings:
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0 cm + 0.00001 cm
+    }{
+        0 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\newcommand{\placelastupdatedtext}{
+  \AddToShipoutPictureFG*{
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+    }}}
+  }
+}
+
+\let\hrefWithoutArrow\href
+
+\newcommand{\AND}{\unskip
+    \cleaders\copy\ANDbox\hskip\wd\ANDbox
+    \ignorespaces
+}
+\newsavebox\ANDbox
+\sbox\ANDbox{$|$}
+
+\begin{document}
+    % Header
+    \begin{header}
+        \fontsize{25 pt}{25 pt}\selectfont Ho Phat
+
+        \vspace{5 pt}
+
+        \normalsize
+        \mbox{Ho Chi Minh City, Vietnam}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{mailto:hohuuphat22@gmail.com}{hohuuphat22@gmail.com}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{tel:+84-09-0632-3761}{(+84) 09-0632-3761}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{https://phatho-dev.com/}{phatho-dev.com}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/phat-ho}{linkedin.com/in/phat-ho}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{https://github.com/DeKal}{github.com/DeKal}}%
+    \end{header}
+
+    \vspace{5 pt - 0.3 cm}
+
+    % Summary
+    \section{Summary}
+    \begin{onecolentry}
+        Senior Software Engineer at SAP SuccessFactors. 9+ years of software engineering experience specializing in back-end development and distributed systems. Proven track record in technical leadership, performance optimization, and delivering scalable solutions that drive business impact. Strong background in algorithm design and competitive programming with expertise in solution architecture and system design.
+    \end{onecolentry}
+
+    % Skills
+    \section{Skills}
+    \begin{onecolentry}
+        \textbf{DevOps:} AWS, K8s, Docker, Jenkins\\
+        \textbf{Code Quality:} Jenkins, Checkmarkx, SonarQ, Sonatype\\
+        \textbf{Back-end:} Java, Spring Boot, Hibernate, REST API, Swagger, Redis, Kafka, Postgres\\
+        \textbf{Languages:} English, Vietnamese
+    \end{onecolentry}
+
+
+    % Work Experience
+    \section{Work Experience}
+
+    \begin{twocolentry}{11/2024 -- present}
+        \textbf{Senior Software Engineer}, SAP SuccessFactors\\
+        \textit{Tech Stack: Java, Spring Boot, SQL, SAP HANA, Kafka}
+    \end{twocolentry}
+    \vspace{0.15cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Leading development of enterprise-grade DAG orchestration framework from ground up for complex business workflow management systems
+            \item Built configurable thread pool-based execution system supporting parallel, sequential processing with customizable retry logic and timeout handling
+            \item Developed intelligent cleanup and rescheduling systems automatically detecting stuck workflows with configurable schedulers and heartbeat monitoring capabilities
+            \item Architected SAP HANA database schemas with internal caching mechanisms eliminating redundant calls and significantly improving response times
+            \item Created comprehensive Spring Boot integration with annotation-based configuration and RESTful APIs enabling seamless framework adoption across teams
+            \item Built high-performance framework capable of processing 10 million records across 100,000 jobs in 2 hours achieving 1,400 RPS
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.3cm}
+
+    \begin{twocolentry}{5/2021 -- 8/2024}
+        \textbf{Lead Backend Engineer}, National Australia Bank\\
+        \textit{Tech Stack: Java, Spring Boot, Hibernate, Postgres, Kafka, Redis, AWS Glue + Lambda}\\
+        \textit{Promoted: Senior Backend Engineer (5/2021) $\rightarrow$ Lead Backend Engineer (11/2022)}
+    \end{twocolentry}
+    \vspace{0.15cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Grew Vietnam team from 3 to 50 people across 5 squads establishing mentorship programs and demonstrating consistent high-quality delivery
+            \item Resolved critical performance issues implementing Redis cache layer reducing response times from 8+ seconds to 100ms and covenant queries to 3 seconds
+            \item Led back-end integration across 3 squads for Credit Activity system MVP coordinating API contracts and establishing integration patterns
+            \item Led comprehensive refactoring and data migration efforts for complex legacy User Access Management system enabling ongoing feature development
+            \item Extended platform architecture to onboard 2 new business areas implementing User Access Management supporting 150k+ corporate clients
+            \item Established reliable database migration pipeline advising DevOps team on Flyway implementation reducing deployment incidents and improving release efficiency
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.3cm}
+
+    \begin{twocolentry}{10/2019 -- 5/2021}
+        \textbf{Fullstack Software Engineer}, ZALORA Group\\
+        \textit{Tech Stack: React, Redux, Golang, Solr, Docker, AWS (Lambda, ECS, S3, CodeBuild), Jenkins}
+    \end{twocolentry}
+    \vspace{0.15cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Released Earth Edit and Luxury features contributing 15\% of total ZALORA Q3 2020 revenue across 6-country mobile web platform
+            \item Optimized bundle sizes to less than 150KB for main chunks and enhanced service worker functionality across 6 countries without conflicts
+            \item Migrated build process from Jenkins to AWS CodeBuild and moved Costa search architecture to blue-green ECS deployment improving reliability
+            \item Implemented A/B testing for Learning-to-Rank with Solr and Datajet integration while improving caching with in-memory solutions for search relevance
+            \item Reduced error rates to less than 1\% through comprehensive error handling and logging optimization in Sentry and NewRelic platforms
+            \item Built AWS Lambda deployment bot for easy ticket deployment to environments and established proper ESLint rules across entire project codebase
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.3cm}
+
+    \begin{twocolentry}{04/2018 -- 10/2019}
+        \textbf{Fullstack Software Engineer \& Scrum Guardian}, DEK Technology\\
+        \textit{Tech Stack: Node.js, Docker, Kafka, Kubernetes, Jenkins, Cassandra, EFK Stack, Hadoop HDFS, Apache Hive}
+    \end{twocolentry}
+    \vspace{0.15cm}
+     \begin{onecolentry}
+        \begin{highlights}
+            \item Served as Scrum Guardian facilitating team processes and solutions improving overall performance and delivery efficiency
+            
+            \item Maintained and developed Davis visualization tool providing statistical insights for test case execution across Jenkins pipelines
+            
+            \item Built and deployed Kafka connectors using XPATH selectors to automatically pull Jenkins results creating real-time pipeline
+            
+            \item Conducted comparative analysis between Hadoop HDFS + Apache Hive and Cassandra for backend query optimization
+            
+            \item Deployed multi-component applications including Kafka Confluence and Davis to Kubernetes and implemented comprehensive EFK logging system
+            
+            \item Established robust CI system using Jenkins and Gerrit achieving nearly 100\% test coverage through refactoring
+        \end{highlights}
+    \end{onecolentry}
+
+
+    \vspace{0.3cm}
+
+    \begin{twocolentry}{06/2016 -- 04/2018}
+        \textbf{Software Engineer}, Global Cybersoft\\
+        \textit{Intern (06/2016 -- 12/2016) $\rightarrow$ Fresher Engineer (07/2017 -- 04/2018)}\\
+        \textit{Tech Stack: Java, Spring MVC, Hibernate, PostgreSQL, Java Swing, HTML/CSS, JavaScript, jQuery}
+    \end{twocolentry}
+    \vspace{0.15cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Maintained and developed desktop application for industrial printing operations using Java
+            
+            \item Built surveillance system using Spring MVC and Hibernate integrating CV algorithms
+            
+            \item Designed system architecture and managed development tracks collaborating with SE teams
+            
+            \item Presented project demos to stakeholders demonstrating technical solutions and gathering feedback
+        \end{highlights}
+
+    \end{onecolentry}
+    \vspace{0.3cm}
+
+    % Projects
+    \section{Pet Projects}
+
+    \begin{twocolentry}{08/2020 -- present}
+        \textbf{Tech Lead \& Scrum Master}, Boot Career\\
+        \textit{United States (Remote)}\\
+        \textit{Tech Stack: React, Redux Toolkit, Node.js, TypeScript, MongoDB, Terraform, Storybook, CircleCI, Heroku, Netlify}
+    \end{twocolentry}
+    \vspace{0.15cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Leading development of comprehensive web platform helping people from non-traditional backgrounds transition into tech careers
+            
+            \item Re-architected legacy application using modern React ecosystem with Redux Toolkit establishing scalable component-driven architecture for maintainability
+            
+            \item Built responsive jobseeker dashboard with React CRA integrated Storybook and developed Node.js microservice with Express framework
+            
+            \item Implemented organization-wide infrastructure management using Terraform established CI/CD pipelines with GitHub Actions and automated deployment
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.3cm}
+
+    \begin{twocolentry}{11/2019 -- present}
+        \textbf{Full-Stack Developer}, DeKal Personal Portfolio Platform\\
+        \textit{Tech Stack: Next.js, Spring MVC, Java, MongoDB, React, Redux, Vercel, Heroku, CircleCI, DangerJS}
+    \end{twocolentry}
+    \vspace{0.15cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Built portfolio website using Next.js with server-side rendering and automated deployment
+            
+            \item Developed Spring MVC backend with RESTful APIs and React CMS integration
+            
+            \item Established Heroku pipeline with staging production environments and automated release management
+            
+            \item Portfolio accessible at \href{https://phatho-folio.now.sh/}{phatho-folio.now.sh} showcasing modern web development and responsive design
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.3cm}
+
+    \begin{twocolentry}{06/2020 -- 09/2020}
+        \textbf{Mobile Developer (Freelance)}, Popswap\\
+        \textit{Sweden (Remote)}\\
+        \textit{Tech Stack: React Native, Redux, Android/iOS, Swish Payment}
+    \end{twocolentry}
+    \vspace{0.15cm}
+  \begin{onecolentry}
+    \begin{highlights}
+        \item Refactored Tinder-style mobile application using React Native with clean architecture patterns
+        
+        \item Conducted comprehensive audit removing outdated features and created streamlined automated deployment scripts
+        
+        \item Integrated Swish payment system and developed premium subscription features with in-app purchases
+        
+        \item Managed dual-platform deployment ensuring consistent user experience across Android and iOS platforms
+    \end{highlights}
+\end{onecolentry}
+    \vspace{0.3cm}
+
+    % Honors & Awards
+    \section{Honors \& Awards}
+    \begin{onecolentry}
+        \textbf{12th Place:} ACM-ICPC VietNam Southern Provincial Programming Contest, Ho Chi Minh city, 2015\\
+        \textbf{2rd Place:} Olympic cap truong Khoa hoc tu nhien, Ho Chi Minh city, 2013\\
+        \textbf{3rd Place:} Hoc sinh gioi cap thanh pho, Ho Chi Minh city, 2012\\
+        \textbf{1rd Place:} Hoc sinh gioi cap thanh pho, Ho Chi Minh city, 2011\\
+        \textbf{3rd Place:} Tin hoc tre, Ho Chi Minh city, 2011
+    \end{onecolentry}
+    \vspace{0.3cm}
+
+    % Research work
+    \section{Research Work}
+    \begin{twocolentry}{3/2017--9/2017}
+        \textbf{Graduate Thesis}: Analyzing and Detecting Sentiment of Readers through their Comments on News Articles in Vietnamese
+    \end{twocolentry}
+    \vspace{0.15cm}
+    \begin{onecolentry}
+   \begin{highlights}
+        \item \textbf{Automated Data Collection:} Built web crawler to collect VNExpress comments automatically, scheduling extraction intervals and storing data for sentiment analysis.
+        
+        \item \textbf{Machine Learning Implementation:} Implemented SVM algorithm for sentiment classification, categorizing Vietnamese comments into positive, negative, and neutral values.
+        
+        \item \textbf{Web Analytics Platform:} Developed Java web application with intuitive interface for extracting and visualizing sentiment analysis results effectively.
+    \end{highlights}
+    \end{onecolentry}
+
+    % Education
+    \section{Education}
+    \begin{twocolentry}{2013 - 2017}
+        \textbf{Bachelor of Science in Computer Science and Engineering}, Vietnam University of Science\\
+        \textit{Ho Chi Minh city}
+    \end{twocolentry}
+    \begin{onecolentry}
+        Degree Classification: Very Good
+    \end{onecolentry}
+    \begin{twocolentry}{2024}
+        \textbf{AWS Certified Solutions Architect – Associate}, AWS\\
+        \textit{Ho Chi Minh city}
+    \end{twocolentry}
+    \begin{onecolentry}
+        View \href{https://www.credly.com/badges/dbd8fac9-4fa7-4f2f-9c78-dce2d3b4d856/public_url}{Cert}.
+    \end{onecolentry}
+    \begin{twocolentry}{2022}
+        \textbf{AWS Certified Cloud Pratitioner}, AWS\\
+        \textit{Ho Chi Minh city}
+    \end{twocolentry}
+    \begin{onecolentry}
+        View \href{https://www.credly.com/badges/9a029de9-a984-42d3-bc0d-5810ec42e49d/public_url}{Cert}.
+    \end{onecolentry}
+    \begin{twocolentry}{2015}
+        \textbf{TOEFL ibt}, English Certificate\\
+        \textit{Ho Chi Minh city}
+    \end{twocolentry}
+    \begin{onecolentry}
+        85 pts
+    \end{onecolentry}
+
+\end{document} 
