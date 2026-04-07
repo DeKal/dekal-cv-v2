@@ -180,16 +180,15 @@
     % Summary
     \section{Summary}
     \begin{onecolentry}
-        Senior Software Engineer at SAP SuccessFactors. 9+ years of software engineering experience specializing in back-end development and distributed systems. Proven track record in technical leadership, performance optimization, and delivering scalable solutions that drive business impact. Strong background in algorithm design and competitive programming with expertise in solution architecture and system design.
+        Senior Software Engineer at SAP SuccessFactors specializing in high-throughput distributed systems and DAG orchestration frameworks. 9+ years of experience building scalable backend solutions processing billions of events across multi-tenant environments. Proven track record in technical leadership, performance optimization from seconds to milliseconds, and architecting enterprise-grade data ingestion pipelines. Strong background in algorithm design and competitive programming with expertise in solution architecture and system design.
     \end{onecolentry}
 
     % Skills
     \section{Skills}
     \begin{onecolentry}
         \textbf{DevOps:} AWS, K8s, Docker, Jenkins\\
-        \textbf{Code Quality:} Jenkins, Checkmarkx, SonarQ, Sonatype\\
-        \textbf{Back-end:} Java, Spring Boot, Hibernate, REST API, Swagger, Redis, Kafka, Postgres\\
-        \textbf{Languages:} English, Vietnamese
+        \textbf{Code Quality:} Jenkins, Checkmarx, SonarQube, Sonatype\\
+        \textbf{Back-end:} Java, Spring Boot, Hibernate, REST API, OpenAPI, Redis, Kafka, Postgres
     \end{onecolentry}
 
 
@@ -206,18 +205,18 @@
             \item Leading development of enterprise-grade DAG orchestration framework from ground up for complex business workflow management systems
             \item Built configurable thread pool-based execution system supporting parallel, sequential processing with customizable retry logic and timeout handling
             \item Developed cleanup and rescheduling systems automatically detecting stuck workflows with configurable schedulers and heartbeat monitoring capabilities
-            \item Architected SAP HANA database schemas with internal caching mechanisms eliminating redundant calls and significantly improving response times
             \item Created comprehensive Spring Boot integration with annotation-based configuration and RESTful APIs enabling seamless framework adoption across teams
             \item Engineered robust data ingestion service leveraging the DAG orchestration framework to organize complex workflows transferring initial loads from multiple talent data sources into SAP Business Data Cloud
-            \item Built high-performance framework capable of processing 10 million records across 100,000 jobs in 2 hours achieving 1,400 RPS
+            \item Built high-performance framework capable of processing 1 million events per hour across 100,000 tasks
+            \item Managing data ingestion across multiple customer tenants processing over 3 billion events with largest single tenant handling 1+ billion events
         \end{highlights}
     \end{onecolentry}
     \vspace{0.3cm}
 
-    \begin{twocolentry}{5/2021 -- 8/2024}
+    \begin{twocolentry}{05/2021 -- 08/2024}
         \textbf{Lead Backend Engineer}, National Australia Bank\\
-        \textit{Tech Stacks: Java, Spring Boot, Hibernate, Postgres, Kafka, Redis, AWS Glue + Lambda}\\
-        \textit{Promoted: Senior Backend Engineer (5/2021) $\rightarrow$ Lead Engineer (11/2022)}
+        \textit{Tech Stacks: Java, Spring Boot, Hibernate, Postgres, Kafka, Redis, AWS Glue}\\
+        \textit{Promoted: Senior Backend Engineer (05/2021) $\rightarrow$ Lead Engineer (11/2022)}
     \end{twocolentry}
     \vspace{0.15cm}
     \begin{onecolentry}
@@ -232,42 +231,34 @@
     \end{onecolentry}
     \vspace{0.3cm}
 
-    \begin{twocolentry}{10/2019 -- 5/2021}
+    \begin{twocolentry}{10/2019 -- 05/2021}
         \textbf{Fullstack Software Engineer}, ZALORA Group\\
-        \textit{Tech Stacks: React, Redux, Golang, Solr, Docker, AWS (Lambda, ECS, S3, CodeBuild), Jenkins}
+        \textit{Tech Stacks: React, Redux, Golang, Solr, AWS (Lambda, ECS), Docker}
     \end{twocolentry}
     \vspace{0.15cm}
     \begin{onecolentry}
         \begin{highlights}
             \item Released Earth Edit and Luxury features contributing 15\% of total ZALORA Q3 2020 revenue across 6-country mobile web platform
-            \item Optimized bundle sizes to less than 150KB for main chunks and enhanced service worker functionality across 6 countries without conflicts
-            \item Migrated build process from Jenkins to AWS CodeBuild and moved Costa search architecture to blue-green ECS deployment improving reliability
+            \item Migrated build process from Jenkins to AWS CodeBuild with optimized bundle sizes under 150KB, moved Costa search architecture to blue-green ECS deployment, and built Lambda deployment bot
             \item Implemented A/B testing for Learning-to-Rank with Solr and Datajet integration while improving caching with in-memory solutions for search relevance
             \item Reduced error rates to less than 1\% through comprehensive error handling and logging optimization in Sentry and NewRelic platforms
-            \item Built AWS Lambda deployment bot for easy ticket deployment to environments and established proper ESLint rules across entire project codebase
-            \item Optimized and scaled the Costa service to handle 50,000 RPM per country (across 6 countries) with P90 latency around 50ms during the 11/11 peak.
+            \item Optimized and scaled the Costa service to handle 50,000 RPM per country (across 6 countries) with P90 latency around 50ms during the 11/11 peak
         \end{highlights}
     \end{onecolentry}
     \vspace{0.3cm}
 
     \begin{twocolentry}{04/2018 -- 10/2019}
         \textbf{Fullstack Software Engineer \& Scrum Guardian}, DEK Technology\\
-        \textit{Tech Stacks: Node.js, Docker, Kafka, Kubernetes, Jenkins, Cassandra, EFK Stack, Hadoop HDFS, Apache Hive}
+        \textit{Tech Stacks: Node.js, Kafka, Kubernetes, Cassandra, Hadoop HDFS}
     \end{twocolentry}
     \vspace{0.15cm}
      \begin{onecolentry}
         \begin{highlights}
-            \item Served as Scrum Guardian facilitating team processes and solutions improving overall performance and delivery efficiency
-            
-            \item Maintained and developed Davis visualization tool providing statistical insights for test case execution across Jenkins pipelines
-            
-            \item Built and deployed Kafka connectors using XPATH selectors to automatically pull Jenkins results creating real-time pipeline
-            
-            \item Conducted comparative analysis between Hadoop HDFS + Apache Hive and Cassandra for backend query optimization
-            
-            \item Deployed multi-component applications including Kafka Confluence and Davis to Kubernetes and implemented comprehensive EFK logging system
-            
-            \item Established robust CI system using Jenkins and Gerrit achieving nearly 100\% test coverage through refactoring
+            \item Developed Davis visualization tool providing statistical insights for test case execution and built Kafka connectors creating real-time data pipeline from Jenkins
+
+            \item Deployed multi-component applications to Kubernetes with comprehensive EFK logging system and established CI pipeline achieving nearly 100\% test coverage
+
+            \item Served as Scrum Guardian facilitating team processes and conducted comparative analysis between Hadoop HDFS + Apache Hive and Cassandra for backend optimization
         \end{highlights}
     \end{onecolentry}
 
@@ -282,103 +273,24 @@
     \vspace{0.15cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Maintained and developed desktop application for industrial printing operations using Java
-            
-            \item Built surveillance system using Spring MVC and Hibernate integrating CV algorithms
-            
-            \item Designed system architecture and managed development tracks collaborating with SE teams
-            
-            \item Presented project demos to stakeholders demonstrating technical solutions and gathering feedback
+            \item Developed desktop application for industrial printing operations and built surveillance system using Spring MVC and Hibernate integrating CV algorithms
+
+            \item Designed system architecture, managed development tracks, and presented technical solutions to stakeholders
         \end{highlights}
 
     \end{onecolentry}
-    \vspace{0.3cm}
-
-    % Projects
-    \section{Pet Projects}
-
-    \begin{twocolentry}{08/2020 -- present}
-        \textbf{Tech Lead \& Scrum Master}, Boot Career\\
-        \textit{United States (Remote)}\\
-        \textit{Tech Stacks: React/Redux, Node.js/TypeScript, MongoDB, CircleCI, Heroku}
-    \end{twocolentry}
-    \vspace{0.15cm}
-    \begin{onecolentry}
-        \begin{highlights}
-            \item Leading development of comprehensive web platform helping people from non-traditional backgrounds transition into tech careers
-            
-            \item Re-architected legacy application using modern React ecosystem with Redux Toolkit establishing scalable component-driven architecture for maintainability
-            
-            \item Built responsive jobseeker dashboard with React CRA integrated Storybook and developed Node.js microservice with Express framework
-            
-            \item Implemented organization-wide infrastructure management using Terraform established CI/CD pipelines with GitHub Actions and automated deployment
-        \end{highlights}
-    \end{onecolentry}
-    \vspace{0.3cm}
-
-    \begin{twocolentry}{11/2019 -- present}
-        \textbf{Full-Stack Developer}, DeKal Personal Portfolio Platform\\
-        \textit{Tech Stacks: Next.js, Spring, Java, MongoDB, Redux, Vercel, Heroku, CircleCI}
-    \end{twocolentry}
-    \vspace{0.15cm}
-    \begin{onecolentry}
-        \begin{highlights}
-            \item Built portfolio website using Next.js with server-side rendering and automated deployment
-            
-            \item Developed Spring MVC backend with RESTful APIs and React CMS integration
-            
-            \item Established Heroku pipeline with staging production environments and automated release management
-            
-            \item Portfolio accessible at \href{https://phatho-folio.now.sh/}{phatho-folio.now.sh} showcasing modern web development and responsive design
-        \end{highlights}
-    \end{onecolentry}
-    \vspace{0.3cm}
-
-    \begin{twocolentry}{06/2020 -- 09/2020}
-        \textbf{Mobile Developer (Freelance)}, Popswap\\
-        \textit{Sweden (Remote)}\\
-        \textit{Tech Stacks: React Native, Redux, Android/iOS, Swish Payment}
-    \end{twocolentry}
-    \vspace{0.15cm}
-  \begin{onecolentry}
-    \begin{highlights}
-        \item Refactored Tinder-style mobile application using React Native with clean architecture patterns
-        
-        \item Conducted comprehensive audit removing outdated features and created streamlined automated deployment scripts
-        
-        \item Integrated Swish payment system and developed premium subscription features with in-app purchases
-        
-        \item Managed dual-platform deployment ensuring consistent user experience across Android and iOS platforms
-    \end{highlights}
-\end{onecolentry}
     \vspace{0.3cm}
 
     % Honors & Awards
     \section{Honors \& Awards}
     \begin{onecolentry}
         \textbf{12th Place:} ACM-ICPC VietNam Southern Provincial Programming Contest, Ho Chi Minh city, 2015\\
-        \textbf{2rd Place:} Olympic cap truong Khoa hoc tu nhien, Ho Chi Minh city, 2013\\
+        \textbf{2nd Place:} Olympic cap truong Khoa hoc tu nhien, Ho Chi Minh city, 2013\\
         \textbf{3rd Place:} Hoc sinh gioi cap thanh pho, Ho Chi Minh city, 2012\\
-        \textbf{1rd Place:} Hoc sinh gioi cap thanh pho, Ho Chi Minh city, 2011\\
+        \textbf{1st Place:} Hoc sinh gioi cap thanh pho, Ho Chi Minh city, 2011\\
         \textbf{3rd Place:} Tin hoc tre, Ho Chi Minh city, 2011
     \end{onecolentry}
     \vspace{0.3cm}
-
-    % Research work
-    \section{Research Work}
-    \begin{twocolentry}{3/2017--9/2017}
-        \textbf{Graduate Thesis}: Analyzing and Detecting Sentiment of Readers through their Comments on News Articles in Vietnamese
-    \end{twocolentry}
-    \vspace{0.15cm}
-    \begin{onecolentry}
-   \begin{highlights}
-        \item \textbf{Automated Data Collection:} Built web crawler to collect VNExpress comments automatically, scheduling extraction intervals and storing data for sentiment analysis.
-        
-        \item \textbf{Machine Learning Implementation:} Implemented SVM algorithm for sentiment classification, categorizing Vietnamese comments into positive, negative, and neutral values.
-        
-        \item \textbf{Web Analytics Platform:} Developed Java web application with intuitive interface for extracting and visualizing sentiment analysis results effectively.
-    \end{highlights}
-    \end{onecolentry}
 
     % Education
     \section{Education}
